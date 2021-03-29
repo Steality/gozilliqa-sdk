@@ -18,17 +18,17 @@ package contract
 
 import (
 	"fmt"
-	"github.com/Zilliqa/gozilliqa-sdk/core"
+	"github.com/Steality/gozilliqa-sdk/core"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"os"
 	"strconv"
 	"testing"
 
-	"github.com/Zilliqa/gozilliqa-sdk/account"
-	"github.com/Zilliqa/gozilliqa-sdk/keytools"
-	provider2 "github.com/Zilliqa/gozilliqa-sdk/provider"
-	"github.com/Zilliqa/gozilliqa-sdk/util"
+	"github.com/Steality/gozilliqa-sdk/account"
+	"github.com/Steality/gozilliqa-sdk/keytools"
+	provider2 "github.com/Steality/gozilliqa-sdk/provider"
+	"github.com/Steality/gozilliqa-sdk/util"
 )
 
 func TestContract_DeployTo(t *testing.T) {

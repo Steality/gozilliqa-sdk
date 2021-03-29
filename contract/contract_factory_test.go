@@ -17,8 +17,8 @@
 package contract
 
 import (
-	"github.com/Zilliqa/gozilliqa-sdk/core"
-	"github.com/Zilliqa/gozilliqa-sdk/transaction"
+	"github.com/Steality/gozilliqa-sdk/core"
+	"github.com/Steality/gozilliqa-sdk/transaction"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

@@ -21,7 +21,7 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/Zilliqa/gozilliqa-sdk/util"
+	"github.com/Steality/gozilliqa-sdk/util"
 	"github.com/btcsuite/btcd/btcec"
 )
 
