@@ -18,14 +18,9 @@
 package account
 
 import (
-	"fmt"
-
 	"github.com/Steality/gozilliqa-sdk/crypto"
 	"github.com/Steality/gozilliqa-sdk/keytools"
 	"github.com/Steality/gozilliqa-sdk/util"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcutil/hdkeychain"
-	"github.com/tyler-smith/go-bip39"
 )
 
 type Account struct {
@@ -44,6 +39,7 @@ func NewAccount(privateKey []byte) *Account {
 	}
 }
 
+/*
 func NewHDAccountWithDerivationPath(mnemonic, path string) (*Account, error) {
 	derivationPath, err := ParseDerivationPath(path)
 	if err != nil {
@@ -96,7 +92,7 @@ func NewDefaultHDAccount(mnemonic string, index uint32) (*Account, error) {
 	}
 	return newHDAccount(mnemonic, derivationPath)
 }
-
+*/
 func FromFile(file, passphrase string) (*Account, error) {
 	ks := crypto.NewDefaultKeystore()
 	privateKey, err := ks.DecryptPrivateKey(file, passphrase)
