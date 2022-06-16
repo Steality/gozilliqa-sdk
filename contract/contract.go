@@ -18,11 +18,11 @@ package contract
 
 import (
 	"errors"
-	"github.com/Zilliqa/gozilliqa-sdk/account"
-	"github.com/Zilliqa/gozilliqa-sdk/core"
-	"github.com/Zilliqa/gozilliqa-sdk/provider"
-	"github.com/Zilliqa/gozilliqa-sdk/transaction"
-	"github.com/Zilliqa/gozilliqa-sdk/util"
+	"github.com/Steality/gozilliqa-sdk/account"
+	"github.com/Steality/gozilliqa-sdk/core"
+	"github.com/Steality/gozilliqa-sdk/provider"
+	"github.com/Steality/gozilliqa-sdk/transaction"
+	"github.com/Steality/gozilliqa-sdk/util"
 	"strconv"
 	"strings"
 )

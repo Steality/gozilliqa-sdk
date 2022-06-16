@@ -19,9 +19,14 @@ package subscription
 import (
 	"context"
 	"fmt"
+<<<<<<< HEAD
 	"github.com/Zilliqa/gozilliqa-sdk/core"
 	"github.com/Zilliqa/gozilliqa-sdk/provider"
 	"github.com/Zilliqa/gozilliqa-sdk/workpool"
+=======
+	"github.com/Steality/gozilliqa-sdk/provider"
+	"github.com/Steality/gozilliqa-sdk/workpool"
+>>>>>>> master
 	"strconv"
 	"strings"
 	"sync"

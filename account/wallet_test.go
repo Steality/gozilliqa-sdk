@@ -23,10 +23,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/Zilliqa/gozilliqa-sdk/core"
-	provider2 "github.com/Zilliqa/gozilliqa-sdk/provider"
-	"github.com/Zilliqa/gozilliqa-sdk/transaction"
-	"github.com/Zilliqa/gozilliqa-sdk/util"
+	"github.com/Steality/gozilliqa-sdk/core"
+	provider2 "github.com/Steality/gozilliqa-sdk/provider"
+	"github.com/Steality/gozilliqa-sdk/transaction"
+	"github.com/Steality/gozilliqa-sdk/util"
 	"github.com/stretchr/testify/assert"
 )
 
