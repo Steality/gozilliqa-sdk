@@ -18,12 +18,14 @@ package provider
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"errors"
-	"github.com/Steality/gozilliqa-sdk/core"
-	"github.com/ybbus/jsonrpc"
 	"io/ioutil"
 	"net/http"
+
+	"github.com/Steality/gozilliqa-sdk/core"
+	"github.com/ybbus/jsonrpc"
 )
 
 type Provider struct {
@@ -536,7 +538,7 @@ func (provider *Provider) CreateTransactionBatch(payloads [][]TransactionPayload
 		r := jsonrpc.NewRequest("CreateTransaction", payload)
 		requests = append(requests, r)
 	}
-	return provider.rpcClient.CallBatch(requests)
+	return provider.rpcClient.CallBatch(context.Background(), requests)
 }
 
 func (provider *Provider) CreateTransactionRaw(payload []byte) (*jsonrpc.RPCResponse, error) {
@@ -581,7 +583,7 @@ func (provider *Provider) GetTransactionBatch(transactionHashes []string) ([]*co
 		requests = append(requests, r)
 	}
 
-	results, err := provider.rpcClient.CallBatch(requests)
+	results, err := provider.rpcClient.CallBatch(context.Background(), requests)
 	if err != nil {
 		return nil, err
 	}
@@ -873,7 +875,7 @@ func (provider *Provider) GetBalance(user_address string) (*core.BalanceAndNonce
 }
 
 func (provider *Provider) call(method_name string, params ...interface{}) (*jsonrpc.RPCResponse, error) {
-	response, err := provider.rpcClient.Call(method_name, params)
+	response, err := provider.rpcClient.Call(context.Background(), method_name, params)
 
 	if err != nil {
 		return nil, err
